@@ -1,0 +1,12 @@
+* text=auto eol=lf
+*.png binary
+*.gif binary
+*.ttf binary
+*.otf binary
+*.iso binary
+*.pce binary
+*.bin binary
+*.dat binary
+*.gim binary
+*.bps binary
+*.xdelta binary

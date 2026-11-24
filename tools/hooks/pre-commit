@@ -1,0 +1,23 @@
+#!/bin/sh
+# Translation-repo pre-commit hook (translate-retro-game skill).
+CHECK='python3 -X utf8 tools/check.py'
+
+files=$(git diff --cached --name-only --diff-filter=AM)
+
+# ROM images, disc images, containers, savestates, and patches never go in git.
+bad=$(printf '%s\n' "$files" | grep -Ei '\.(pce|sgx|sfc|smc|gba|nds|iso|cue|chd|dat|pbp|edat|elf|gim|mss|ppst|ss[0-9]|state|dsv|bps|xdelta|zip)$')
+if [ -n "$bad" ]; then
+  echo "pre-commit: ROM/container/patch files staged:"; echo "$bad"; exit 1
+fi
+
+# NUL bytes in source = a shell edit mangled an escape.
+src=$(printf '%s\n' "$files" | grep -E '\.(py|lua|asm|s|inc|sh)$')
+if [ -n "$src" ]; then
+  python3 -X utf8 -c "
+import sys
+bad = [f for f in sys.argv[1:] if b'\x00' in open(f, 'rb').read()]
+sys.exit('pre-commit: NUL byte in ' + ', '.join(bad) + ' (mangled escape?)' if bad else 0)
+" $src || exit 1
+fi
+
+sh -c "$CHECK" || { echo "pre-commit: check failed: $CHECK"; exit 1; }
