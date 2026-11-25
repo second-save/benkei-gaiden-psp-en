@@ -10,6 +10,10 @@ container. This patch also translates what only the PSN release has: the emulato
 
 The patch holds no game data: you need your own copy of the game.
 
+If you enjoy it, you can support the work on [Ko-fi](https://ko-fi.com/second_save).
+
+![The opening in English](docs/media/intro.gif)
+
 ## Status: emulator release
 
 - **Made for PPSSPP.** Tested in PPSSPP 1.20.4 on macOS.
@@ -23,6 +27,32 @@ The patch holds no game data: you need your own copy of the game.
 - **Still in Japanese:** the CERO rating mark and the logos.
 
 Please report problems in this repository's issues, with a screenshot and where you were in the game.
+
+## Screenshots
+
+Taken in PPSSPP on the patched files.
+
+| | |
+|---|---|
+| ![Title](docs/media/game-title.png) | ![Dialogue](docs/media/game-dialogue.png) |
+| ![Field menu](docs/media/game-menu.png) | ![Status](docs/media/game-status.png) |
+
+The emulator's notice, prompts and System Menu (press L in game):
+
+| | |
+|---|---|
+| ![Notice](docs/media/notice.png) | ![Autosave notice](docs/media/prompt-autosave.png) |
+| ![Backup RAM](docs/media/prompt-backup-ram.png) | ![Screen size](docs/media/prompt-screen-size.png) |
+| ![System Menu](docs/media/system-menu.png) | ![Dialogue](docs/media/game-dialogue2.png) |
+
+The manual (System Menu > Manual), all 18 pages redrawn in English:
+
+![The manual](docs/media/manual.gif)
+
+| | |
+|---|---|
+| ![Manual page 1](docs/media/manual-p01.png) | ![Controls](docs/media/manual-p08-controls.png) |
+| ![Screen layout](docs/media/manual-p11-screen.png) | ![Jutsu](docs/media/manual-p13-jutsu.png) |
 
 ## Apply the patch
 
@@ -66,7 +96,7 @@ a built `../benkei-gaiden-pce/build/benkei_en.pce` (v1.0). Then:
 
 ## Credits & Licence
 
-- **Translation, engineering and AI assistance:** `second-save`.
+- **Translation, engineering and AI assistance:** `second-save`. Support: [Ko-fi](https://ko-fi.com/second_save).
 - **Manual and notice font:** M+ 1p, SIL Open Font License (`fonts/OFL.txt`).
 - **EBOOT signing:** sign_np by Hykem.
 - *Benkei Gaiden* © 1989 Sunsoft. PC Engine Archives © 2010 Hudson Soft. This is an unofficial, non-commercial

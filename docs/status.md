@@ -1,7 +1,8 @@
 # Status — Benkei Gaiden (PSP PC Engine Archives, NPJJ30035)
 
 ## Current Phase
-**Release-ready (2026-11-25).** Built, booted, packaged; not published (needs the user's go).
+**Published 2026-11-25** (user's go): public repo `second-save/benkei-gaiden-psp-en`, release `v1.0` with
+the zip and both xdelta patches. README media in `docs/media/` (session `work/play/en`, GIFs via `tools/gif.py`).
 
 ## Builds
 - `python3.14 -X utf8 tools/build.py` -> `build/NPJJ30035/CONTENT.DAT` sha1 `526d806730f8a497ddefe7720d62f3e694c50a81`
@@ -24,4 +25,4 @@ manual viewer pages 1–18 (`work/qa/manual/viewer.png`). Not seen: import/expor
 no-Memory-Stick prompts.
 
 ## Next
-- User playtest of the patched files in stock PPSSPP, then publish (repo + release) on the user's say-so.
+- Player reports via GitHub issues; optional: port the PSN flash reduction (D10).
