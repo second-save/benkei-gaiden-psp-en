@@ -1,16 +1,27 @@
 # Status — Benkei Gaiden (PSP PC Engine Archives, NPJJ30035)
 
 ## Current Phase
-- **Phase 0 & Phase 1 (Setup, Identity Gate & Recon):** Complete — ready for Phase 2+ implementation planning (build pipeline, EBOOT/XMB/GIM/manual translation, headless QA, and xdelta3 release).
+**Release-ready (2026-11-25).** Built, booted, packaged; not published (needs the user's go).
 
-## Done
-- **Phase 0:** Initialized `benkei-gaiden-psp` on `main` (`second-save`, `core.hooksPath tools/hooks`), pinned clean ISO + `NPJJ30035/{CONTENT.DAT,PARAM.PBP,PSP-KEY.EDAT}` in `rom.sha1`, fetched stock `PPSSPP` v1.20.4 (`tools/pp.py`, port `43135`), added `tools/play.sh` (`PPSSPPHeadless`), and built `work/src/sign_np/sign_np`.
-- **Phase 3 (Identity Gate):** Implemented `tools/content_xor.py` and `tools/vpce.py`; `tests/test_identity.py` passes byte-identical roundtrips for both `CONTENT.DAT` (preserving 28-byte EOF tail) and the PSP UMD ISO (`iso9660.patch`).
-- **Phase 1 (Recon & Empirical Verification):**
-  - Dumped `work/eboot_jp.elf` (`708,656` B, `SHA-1: 1b8c2e90c1243c0a2480b22ba1322592572f4abf`), verified `sign_np` tag-2 (`0xD9160BF0`) re-signing, matched `71/71` `psnvpce` UTF-8 strings (`0x817A0..0x82CB8`), and confirmed no extra JP UTF-8 strings via `jpscan.py`.
-  - Diffed `N43302SL.PCE` vs No-Intro `.pce` (only 9 banks carry 2010 `$E6`/`$E7` flash-dampening counters; no `psnvpce` hooks).
-  - Empirically verified `1 MiB` `benkei_en.pce` inside `NPJJ30035/CONTENT.DAT` (`xdelta3` = `109,595` B) in `PPSSPPHeadless`: boots splash/title, executes `$61..$7E` far-bank dialogue in Rinsho-ji, opens `Continue -> Save RAM -> Benkei 1..3`, and displays `L` System Menu & `001/018` manual.
-  - Completed full GIM roundtrip check (`chyuikanki_PSP.GIM`, `HUDSON.GIM` == Ziria, `WALL.GIM` == Ziria) and surveyed all 18 `480×248` manual pages + XMB images (`docs/re/graphics_survey.md`).
+## Builds
+- `python3.14 -X utf8 tools/build.py` -> `build/NPJJ30035/CONTENT.DAT` sha1 `526d806730f8a497ddefe7720d62f3e694c50a81`
+  and `build/benkei_psp_en.iso` sha1 `75c3b9600f173af1de79d1438a4e8e30b19f5d29` (same output every run).
+  `--identity` asserts CONTENT.DAT rebuilds byte-identical.
+- `tools/release.sh` -> `dist/benkei-gaiden-psn-en{,-iso}.xdelta` (717 KB / 751 KB) + `dist/benkei-gaiden-psn-en.zip`
+  (both patches + README), each re-applied and compared.
+
+## What the build replaces
+- CONTENT.DAT: `N43302SL.PCE` = `../benkei-gaiden-pce/build/benkei_en.pce` (pinned sha1 `9e6ffc62…`, PCE v1.0),
+  `psp_001..018.png` (`tools/manual.py`), `chyuikanki_PSP.GIM` notice and `SAVEDATA.PNG` (`tools/gfx_psp.py`).
+- ISO (`tools/frontend.py`): EBOOT strings from `script/eboot.csv` (71), re-signed with sign_np tag 2;
+  PARAM.SFO + CONFIG.PSP title "Benkei Gaiden"; PIC0 and ICON0.
+- D10: the PSN ROM's 2010 flash-reduction changes are not carried over (README caveat).
+
+## QA (PPSSPPHeadless, session `work/play/en`, cold boot of the build)
+Seen in English: notice GIM, start notice, autosave notice, Backup RAM create/created, screen-size menu and hint,
+"no save data" prompt, save dialog (icon, "Save Data"), Sunsoft logo, English title, prologue crawl, System Menu,
+manual viewer pages 1–18 (`work/qa/manual/viewer.png`). Not seen: import/export, Memory-Stick-full and
+no-Memory-Stick prompts.
 
 ## Next
-- Hand back for Phase 2–9 PSP execution plan (`script/eboot.csv` ported to `0x817A0..0x82CB8`, XMB/CONFIG/PARAM.SFO/GIM localization, 18-page manual typesetting + EN screenshots, PPSSPPHeadless QA routes + saves, and xdelta3 release packager).
+- User playtest of the patched files in stock PPSSPP, then publish (repo + release) on the user's say-so.

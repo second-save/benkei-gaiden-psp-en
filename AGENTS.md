@@ -5,6 +5,8 @@ Hooks setup on fresh clone: `git config core.hooksPath tools/hooks`.
 
 ## Commands (run from repo root)
 - Check: `python3 -X utf8 tools/check.py` (pre-commit hook runs this)
+- Build: `python3.14 -X utf8 tools/build.py` (`--identity` for the roundtrip) -> `build/NPJJ30035/` + `build/benkei_psp_en.iso`
+- Release: `tools/release.sh` -> `dist/` xdelta patches + zip (README must list both patched sha1)
 - Build `sign_np`: `bash tools/build_sign_np.sh` -> `work/src/sign_np/sign_np`
 - Headless QA: `tools/play.sh new SESSION [orig]` / `tools/play.sh SESSION keys...` (uses `PPSSPPHeadless`)
 - Stock GUI boot: `python3 -X utf8 tools/pp.py start [orig]` / `python3.14 -X utf8 tools/pp.py fb OUT.png` / `python3 -X utf8 tools/pp.py stop`

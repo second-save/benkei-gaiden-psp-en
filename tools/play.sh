@@ -8,15 +8,17 @@ PLAY="$(python3 -X utf8 tools/skill.py)/scripts/play.py"
 if [ "${1:-}" = "new" ]; then
   s="work/play/$2"
   src="build"
+  iso="build/benkei_psp_en.iso"
   if [ "${3:-}" = "orig" ]; then
     src="rom"
+    iso="$(ls rom/*.iso)"
   elif [ -n "${3:-}" ] && [ -d "${3:-}" ]; then
     src="$3"
   fi
   rm -rf "$s"
   mkdir -p "$s/memstick/PSP/GAME"
   cp -R "$src/NPJJ30035" "$s/memstick/PSP/GAME/"
-  exec python3.14 -X utf8 "$PLAY" "$s" --rom "$(ls rom/*.iso)" --wait 600
+  exec python3.14 -X utf8 "$PLAY" "$s" --rom "$iso" --wait 600
 fi
 s="work/play/$1"
 shift

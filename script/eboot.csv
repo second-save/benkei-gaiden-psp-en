@@ -1,0 +1,72 @@
+offset,jp,en
+0x817a0,このゲームの解説書は、Lボタンからご覧いただけます。,Press the L button to read this game's manual.
+0x817f0,小さいお子さまには、保護者の方がお読みのうえ、安全にお使,"For safety, parents should read it to young"
+0x81848,いください。,children first.
+0x8185c,メモリースティック™が入っていません。\nこのゲームのセーブデータをセーブするには空き容量が%dKB以上必要です。,There is no Memory Stick™ inserted.\nSaving this game's save data needs at least %dKB of free space.
+0x818fc,メモリースティック™が入っていません。\nセーブデータをロードせずにゲームを続けますか？,There is no Memory Stick™ inserted.\nContinue without loading saved data?
+0x81980,メモリースティック™が入っていません。\nセーブデータをセーブせずにゲームを続けますか？,There is no Memory Stick™ inserted.\nContinue without saving?
+0x81a04,このゲームのセーブデータをロードしますか？\nセーブデータをロードすると、現在のバックアップRAMデータが上書きされます。,Load this game's save data?\nLoading it overwrites the current Backup RAM data.
+0x81ab4,セーブデータをセーブしますか？,Save now?
+0x81ae4,スクリーンサイズが変更されました。\nセーブデータをセーブしますか？,The screen size has changed.\nSave now?
+0x81b48,セーブデータをロードせずにゲームを続けますか？,Continue without loading saved data?
+0x81b90,セーブデータをセーブせずにゲームを続けますか？,Continue without saving?
+0x81bd8,このゲームのセーブデータがありません。\nセーブデータをセーブしますか？,There is no save data for this game.\nSave now?
+0x81c44,記録メディアの空き容量が不足しています。\nデータを削除しますか？,There is not enough free space on the storage media.\nDelete some data?
+0x81ca4,スクリーンサイズを設定して下さい。,Please set the screen size.
+0x81cd8,中断したところから再開しますか？,Resume from where you left off?
+0x81d0c,新規作成データ,New Data
+0x81d24,セーブデータがありません,No save data
+0x81d4c,メモリースティック™が入っていません。\nこのゲームにはバックアップRAMデータが必要です。\nバックアップRAMデータを作成するには空き容量が%dKB以上必要です。,There is no Memory Stick™ inserted.\nThis game needs Backup RAM data.\nCreating Backup RAM data needs at least %dKB of free space.
+0x81e2c,メモリースティック™が入っていません\nインポートを中止しますか？,There is no Memory Stick™ inserted.\nCancel the import?
+0x81e8c,このゲームのバックアップRAMデータインポートしますか？\nインポート後は、ゲーム内でセーブしたセーブデータを上書きし、ゲームをリセットします。,Import this game's Backup RAM data?\nThe import overwrites the saves made in the game and resets the game.
+0x81f5c,インポートを中止しますか？,Cancel the import?
+0x81f84,メモリースティック™が入っていません。\nエクスポートを中止しますか？,There is no Memory Stick™ inserted.\nCancel the export?
+0x81fec,このゲームのバックアップRAMデータをエクスポートしますか？,Export this game's Backup RAM data?
+0x82044,エクスポートを中止しますか？,Cancel the export?
+0x82070,このゲームにはバックアップRAMデータが必要です。\nバックアップRAMデータを作成しますか？,This game needs Backup RAM data.\nCreate Backup RAM data?
+0x820f0,記録メディアの空き容量が不足しています。\nこのゲームにはバックアップRAMデータが必要です\nこのゲームのバックアップRAMデータを作成するには空き容量が%dKB以上必要です。\nデータを削除しますか？,There is not enough free space on the storage media.\nThis game needs Backup RAM data.\nCreating this game's Backup RAM data needs at least %dKB of free space.\nDelete some data?
+0x82204,記録メディアの空き容量が不足しています。\nこのゲームのバックアップRAMデータをエクスポートするには空き容量が%dKB以上必要です。\nデータを削除しますか？,There is not enough free space on the storage media.\nExporting this game's Backup RAM data needs at least %dKB of free space.\nDelete some data?
+0x822e0,バックアップRAMデータを作成しました。,Backup RAM data created.
+0x82318,インポートが完了しました。,Import complete.
+0x82340,エクスポートが完了しました。,Export complete.
+0x8236c,バックアップRAMデータがありません。,There is no Backup RAM data.
+0x823a0,バックアップRAMデータの内容が不正です。,The Backup RAM data is corrupted.
+0x823dc,メモリースティック™が入っていません。\nこのゲームのバックアップRAMデータをセーブするには空き容量が%dKB以上必要です。,There is no Memory Stick™ inserted.\nSaving this game's Backup RAM data needs at least %dKB of free space.
+0x82488,このゲームのバックアップRAMデータをセーブしますか？,Save this game's Backup RAM data?
+0x824d4,このゲームにはバックアップRAMデータが必要です。\nバックアップRAMデータを作成してからセーブしますか？,This game needs Backup RAM data.\nCreate Backup RAM data and save?
+0x82568,バックアップRAMデータをセーブせずにゲームを続けますか？,Continue without saving Backup RAM data?
+0x825bc,オートセーブ機能をOFFに設定しますか？\nオートセーブ機能をOFFに設定するとバックアップRAMデータがセーブされません。\nオートセーブ機能の設定はシステムメニューから変更することができます。,"Turn Autosave OFF?\nWith Autosave OFF, Backup RAM data is not saved.\nYou can change the Autosave setting in the System Menu."
+0x826cc,このままゲームを開始しますか？,Start the game as it is?
+0x826fc,バックアップRAMデータを作成中です。,Creating Backup RAM data...
+0x82730,インポート中です。,Importing...
+0x8274c,エクスポート中です。,Exporting...
+0x8276c,メモリースティック™を抜かないでください。,Do not remove the Memory Stick™.
+0x827ac,セーブ中です。,Saving...
+0x827c4,セーブが完了しました。,Save complete.
+0x827ec,フルスクリーン,Full Screen
+0x82804,ズーム,Zoom
+0x82810,オリジナル,Original
+0x82820,スクリーンサイズを設定してください。,Please set the screen size.
+0x82858,セーブ（中断）,Save (Suspend)
+0x82870,ロード（再開）,Load (Resume)
+0x82888,解説書,Manual
+0x82894,スクリーンサイズ,Screen Size
+0x828b0,オートセーブ,Autosave
+0x828c4,***未使用***,***Unused***
+0x828d4,ＯＮ,ON
+0x828dc,ＯＦＦ,OFF
+0x828e8,× 戻る    L/R ±10ページ,× Back    L/R ±10 pages
+0x82908,○ 戻る    L/R ±10ページ,○ Back    L/R ±10 pages
+0x82928,○ 決定,○ OK
+0x82934,× 決定,× OK
+0x82940,× 戻る　○ 決定,× Back  ○ OK
+0x82958,× 決定　○ 戻る,× OK  ○ Back
+0x82970,セーブデータ,Save Data
+0x82984,バックアップRAMデータ,Backup RAM Data
+0x829a4,PCエンジンアーカイブス,PC Engine Archives
+0x829d8,セーブ中 ,Saving
+0x829e8,このゲームはオートセーブ機能を使用してバックアップRAMデータをセーブします。\nオートセーブ中にはメモリースティック™アクセスランプが点滅しますので、その間はメモリースティック™を抜いたり、本体の電源を切ったりしないでください。,"This game uses Autosave to save Backup RAM data.\nWhile it autosaves, the Memory Stick™ access lamp flashes. During that time, do not remove the Memory Stick™ or turn off the system."
+0x82b38,スクリーンサイズはシステムメニュー、Rボタンで変更することができます。\nスクリーンサイズの変更を保存する場合はセーブデータをセーブしてください。,"You can change the screen size in the System Menu or with the R button.\nTo keep the new screen size, save your data."
+0x82c10,ゲームを始める前に「解説書」および「使用上のご注意」、,"Before you play, please read the ""Manual"","
+0x82c64,ならびにお使いになるハードウェアの「取扱説明書」をよく,"the ""Usage Precautions"" and your hardware's"
+0x82cb8,お読みのうえ、正しい方法でご使用ください。,"instruction manual, and play correctly."
